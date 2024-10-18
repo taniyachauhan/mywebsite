@@ -9,67 +9,108 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            height: 100vh;
+            background: url('profile.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
         }
+
+        /* Dark Overlay to make text more readable */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black overlay */
+        }
+
         nav {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent navbar */
             color: white;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
         }
+
         nav .logo {
             font-size: 24px;
             font-weight: bold;
         }
+
         nav ul {
             list-style: none;
             display: flex;
         }
+
         nav ul li {
             margin-right: 20px;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
         }
+
         nav .social-links a {
             margin-left: 10px;
             color: white;
             text-decoration: none;
         }
+
         main {
-            padding: 50px;
-            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            position: relative;
         }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #333;
-            margin: 20px auto;
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
         }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
         .blog-container {
             display: flex;
             justify-content: space-around;
-            margin-top: 30px;
+            flex-wrap: wrap;
+            width: 80%;
         }
+
         .blog-card {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 200px;
+            margin: 10px;
             text-align: center;
         }
+
         .blog-card img {
             width: 100%;
             border-radius: 10px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Dark overlay for readability -->
+    <div class="overlay"></div>
 
     <!-- Navigation Bar -->
     <nav>
@@ -81,16 +122,16 @@
             <li><a href="about/">About</a></li>
         </ul>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/CJKRaymond/" aria-label="LinkedIn" target="_blank">LinkedIn</a>
-            <a href="https://twitter.com/CJKRaymond" aria-label="Twitter" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in//" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/" aria-label="Twitter" target="_blank">Twitter</a>
         </div>
     </nav>
 
-    <!-- Main Section -->
+    <!-- Main Section with Text -->
     <main>
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is where I showcase my skills, projects, and blog posts. Take a look around!</p>
-        <img src="sunset_pic.jpg" alt="Profile" class="profile-pic">
+        <h1>Hello! </h1>
+        <p>Welcome to my space! I'm passionate about coding, design, and creating innovative solutions to complex problems. With a love for creativity, I'm always looking to learn something new and explore different fields of technology.
+When I'm not working, you’ll find me reading, hiking, or playing video games. Take a look around!</p>
 
         <!-- Blog Section -->
         <div class="blog-container">
@@ -104,10 +145,4 @@
             </div>
             <div class="blog-card">
                 <img src="blog3.jpg" alt="Blog 3">
-                <p>Blog Post 3 Title</p>
-            </div>
-        </div>
-    </main>
-
-</body>
-</html>
+                <p>Blog Post 3 Title
