@@ -84,6 +84,12 @@
             margin-bottom: 20px;
         }
 
+        .container {
+            max-width: 800px; /* Limit the width of the content */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 0 20px; /* Add some padding to avoid text touching the edges */
+        }
+
         .blog-container {
             display: flex;
             justify-content: space-around;
@@ -132,15 +138,24 @@
 
         <style>
         .emoji {
-        font-size: 0.9em; /* This makes the emoji 80% of the normal font size */
-        vertical-align: middle; /* Ensures the emoji aligns nicely with the text */
-         }
+            font-size: 0.9em; /* This makes the emoji 90% of the normal font size */
+            vertical-align: middle; /* Ensures the emoji aligns nicely with the text */
+        }
         </style>
-        <div class="content">
-            <p>Welcome to my space! I'm passionate about coding, design, and creating innovative solutions to complex problems. 
-               With a love for creativity, I'm always looking to learn something new and explore different fields of technology.
-               When I'm not working, you’ll find me reading, hiking, or playing video games. Take a look around!</p>
+        
+        <div class="container">
+            <div class="content">
+                <p>Welcome to my space! I'm passionate about coding, design, and creating innovative solutions to complex problems. 
+                   With a love for creativity, I'm always looking to learn something new and explore different fields of technology.
+                   When I'm not working, you’ll find me reading, hiking, or playing video games. Take a look around!</p>
+            </div>
+
+            <!-- Blog Section -->
+            <div class="blog-container">
+                <!-- Blog cards would go here -->
+            </div>
         </div>
+    </main>
 
-        <!-- Blog Section -->
-
+</body>
+</html>
