@@ -69,10 +69,11 @@
         }
 
         main {
-            height: 100vh;
+            height: calc(100vh - 60px); /* Ensure the main section doesn't overlap with the nav */
             display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Align content to the left */
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: flex-start; /* Align content to the left */
             padding-left: 50px; /* Add space between text and screen edge */
             z-index: 1;
             position: relative;
@@ -96,17 +97,19 @@
             text-align: left; /* Align the content text to the left */
         }
 
-        /* Adjust the background image to the right with distance from top, right, and bottom edges */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 80px; /* Distance from top */
-            right: 30px; /* Distance from right */
-            bottom: 20px; /* Distance from bottom */
-            width: 20%; /* Adjust the width of the image */
-            background: url('milk-transformed.png') no-repeat right center;
-            background-size: contain; /* Keep image within screen limits */
-            z-index: -1; /* Keep the image behind the content */
+        /* Style for "Take a look around" section and image */
+        .bottom-section {
+            position: fixed;
+            bottom: 20px;
+            left: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom-section img {
+            width: 100px; /* Set the image size smaller */
+            height: auto;
+            margin-left: 20px; /* Space between image and text */
         }
     </style>
 </head>
@@ -143,10 +146,15 @@
                 <p>I'm passionate about coding, design, and creating innovative solutions to complex problems. 
                    With a love for creativity, I'm always looking to learn something new and explore different fields of technology.
                    When I'm not working, you’ll find me reading, hiking, or playing sports.</p>
-                <p>Take a look around!</p>
             </div>
         </div>
     </main>
+
+    <!-- Bottom Section: "Take a look around" text and profile image -->
+    <div class="bottom-section">
+        <p>Take a look around!</p>
+        <img src="profile.jpg" alt="Profile Image">
+    </div>
 
 </body>
 </html>
