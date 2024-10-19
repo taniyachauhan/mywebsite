@@ -14,9 +14,44 @@
             color: black;
         }
 
-        /* Remove the overlay and navbar for a clean look */
+        /* Adjust the Navigation Bar */
         nav {
-            display: none;
+            background-color: transparent; /* Make the navbar background transparent */
+            color: black;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black; /* Set text color to black */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: black; /* Set link color to black */
+            text-decoration: none;
+        }
+
+        nav .social-links a {
+            margin-left: 10px;
+            color: black; /* Set social links color to black */
+            text-decoration: none;
         }
 
         main {
@@ -31,7 +66,7 @@
 
         h1 {
             font-size: 4em;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-align: left; /* Align heading text to the left */
         }
 
@@ -62,18 +97,32 @@
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">TaCha</div>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="blog/">Blog</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/" aria-label="Twitter" target="_blank">Twitter</a>
+        </div>
+    </nav>
+
     <!-- Main Section with Text -->
     <main>
-        <h1>Hello! <span class="emoji">👋</span></h1>
-
-        <style>
-        .emoji {
-            font-size: 0.9em; /* This makes the emoji 90% of the normal font size */
-            vertical-align: middle; /* Ensures the emoji aligns nicely with the text */
-        }
-        </style>
-        
         <div class="container">
+            <h1>Hello! <span class="emoji">👋</span></h1>
+
+            <style>
+            .emoji {
+                font-size: 0.9em; /* This makes the emoji 90% of the normal font size */
+                vertical-align: middle; /* Ensures the emoji aligns nicely with the text */
+            }
+            </style>
+            
             <div class="content">
                 <p>Welcome to my space! I'm passionate about coding, design, and creating innovative solutions to complex problems. 
                    With a love for creativity, I'm always looking to learn something new and explore different fields of technology.
