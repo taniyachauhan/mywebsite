@@ -23,7 +23,7 @@
         nav {
             background-color: white; /* Change the navbar background to white */
             color: rgba(9, 12, 67); /* Set text color to the previous nav background color */
-            padding: 5px 20px;
+            padding: 10px 20px; /* Increase padding slightly */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -49,7 +49,7 @@
         }
 
         nav ul li {
-            margin-right: 20px;
+            margin-right: 15px; /* Reduce margin between links */
         }
 
         nav ul li a {
@@ -61,11 +61,12 @@
         .nav-right {
             display: flex;
             align-items: center;
+            flex-shrink: 0; /* Prevent shrinking of nav-right */
         }
 
         /* Add a separator between the main navigation and social links */
         .separator {
-            margin: 0 10px;
+            margin: 0 8px;
             color: rgba(9, 12, 67); /* Match the text color */
         }
 
@@ -76,10 +77,10 @@
         }
 
         nav .social-links a {
-            margin-left: 15px;
+            margin-left: 12px; /* Reduce margin between social icons */
             color: rgba(9, 12, 67); /* Set social links color to match the previous nav color */
             text-decoration: none;
-            font-size: 1.5em; /* Increase icon size */
+            font-size: 1.3em; /* Decrease icon size slightly */
         }
 
         main {
@@ -137,6 +138,20 @@
             width: 100px; /* Set the milk-transformed image size smaller */
             height: auto;
             margin-left: 20px; /* Space between image and text */
+        }
+
+        /* Media query to slightly adjust the spacing on smaller screens */
+        @media (max-width: 768px) {
+            nav ul li {
+                margin-right: 10px;
+            }
+            nav .social-links a {
+                margin-left: 8px; /* Reduce margin between social icons further */
+                font-size: 1.2em; /* Decrease icon size */
+            }
+            .separator {
+                margin: 0 5px;
+            }
         }
     </style>
 </head>
