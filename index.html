@@ -26,6 +26,7 @@
             position: fixed;
             top: 0;
             width: 100%;
+            max-width: 100%; /* Ensure no overflow on smaller screens */
             z-index: 1;
         }
 
@@ -49,16 +50,20 @@
             text-decoration: none;
         }
 
+        /* Fix the social links to stay within the screen */
         nav .social-links {
             display: flex;
+            flex-wrap: wrap; /* Allow wrapping if the links overflow */
             align-items: center;
-            padding-right: 20px; /* Add padding to keep social links within screen bounds */
+            padding-right: 10px; /* Reduce padding for more space */
+            max-width: 100%; /* Make sure it stays within the screen */
         }
 
         nav .social-links a {
             margin-left: 10px;
             color: black; /* Set social links color to black */
             text-decoration: none;
+            white-space: nowrap; /* Prevent text from breaking into multiple lines */
         }
 
         main {
