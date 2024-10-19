@@ -40,9 +40,12 @@
             color: rgba(9, 12, 67); /* Set logo text color to match the previous nav color */
         }
 
+        /* Align the About, Resume, Blog to the right */
         nav ul {
             list-style: none;
             display: flex;
+            margin: 0;
+            padding: 0;
         }
 
         nav ul li {
@@ -54,11 +57,22 @@
             text-decoration: none;
         }
 
+        /* Align the main navigation and social links to the right */
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Add a separator between the main navigation and social links */
+        .separator {
+            margin: 0 10px;
+            color: rgba(9, 12, 67); /* Match the text color */
+        }
+
         /* Styling for social icons */
         nav .social-links {
             display: flex;
             align-items: center;
-            padding-right: 30px; /* Add padding to the right for space after Twitter */
         }
 
         nav .social-links a {
@@ -104,7 +118,7 @@
             top: 80px; /* Distance from top */
             right: 30px; /* Distance from right */
             bottom: 20px; /* Distance from bottom */
-            width: 50%; /* Adjust the width of the image */
+            width: 60%; /* Adjust the width of the image */
             background: url('sunset.png') no-repeat right center;
             background-size: contain; /* Keep image within screen limits */
             z-index: -1; /* Keep the image behind the content */
@@ -131,14 +145,22 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="logo">TaCha</div>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="resume.pdf" target="_blank">Resume</a></li>
-            <li><a href="blog/">Blog</a></li>
-        </ul>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <!-- Main Navigation Links (About, Resume, Blog) -->
+        <div class="nav-right">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="blog/">Blog</a></li>
+            </ul>
+
+            <!-- Separator -->
+            <span class="separator">|</span>
+
+            <!-- Social Links (LinkedIn, Twitter) -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </nav>
 
@@ -146,7 +168,6 @@
     <main>
         <div class="container">
             <h1>Hello! <span class="emoji">👋</span></h1>
-            
 
             <style>
             .emoji {
