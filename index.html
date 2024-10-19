@@ -12,6 +12,7 @@
             height: 100vh;
             background: white; /* Set background to white */
             color: black;
+            position: relative;
         }
 
         /* Adjust the Navigation Bar */
@@ -48,6 +49,12 @@
             text-decoration: none;
         }
 
+        nav .social-links {
+            display: flex;
+            align-items: center;
+            padding-right: 20px; /* Add padding to keep social links within screen bounds */
+        }
+
         nav .social-links a {
             margin-left: 10px;
             color: black; /* Set social links color to black */
@@ -82,16 +89,17 @@
             text-align: left; /* Align the content text to the left */
         }
 
-        /* Blending the image to the right without borders */
+        /* Adjust the background image to bottom-right with smooth blending */
         body::before {
             content: '';
             position: absolute;
-            top: 0;
+            bottom: 0;
             right: 0;
             width: 50%;
-            height: 100vh;
-            background: url('profile.jpg') no-repeat center center;
-            background-size: contain; /* Make sure image scales and blends in */
+            height: 70%; /* Adjust the height so it sits nicely in the bottom-right */
+            background: url('profile.jpg') no-repeat bottom right;
+            background-size: contain; /* Keep image within screen limits */
+            z-index: -1; /* Keep the image behind the content */
         }
     </style>
 </head>
