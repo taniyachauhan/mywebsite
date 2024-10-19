@@ -21,8 +21,8 @@
 
         /* Adjust the Navigation Bar */
         nav {
-            background-color: rgba(9, 12, 67); /* Make the navbar black and transparent */
-            color: black;
+            background-color: white; /* Change the navbar background to white */
+            color: rgba(9, 12, 67); /* Set text color to the previous nav background color */
             padding: 5px 20px;
             display: flex;
             justify-content: space-between;
@@ -37,7 +37,7 @@
         nav .logo {
             font-size: 24px;
             font-weight: bold;
-            color: white; /* Set logo text color to white for contrast */
+            color: rgba(9, 12, 67); /* Set logo text color to match the previous nav color */
         }
 
         nav ul {
@@ -50,7 +50,7 @@
         }
 
         nav ul li a {
-            color: white; /* Set link color to white for contrast */
+            color: rgba(9, 12, 67); /* Set link color to match the previous nav color */
             text-decoration: none;
         }
 
@@ -63,7 +63,7 @@
 
         nav .social-links a {
             margin-left: 15px;
-            color: white; /* Set social links color to white for contrast */
+            color: rgba(9, 12, 67); /* Set social links color to match the previous nav color */
             text-decoration: none;
             font-size: 1.5em; /* Increase icon size */
         }
@@ -96,15 +96,15 @@
             text-align: left; /* Align the content text to the left */
         }
 
-        /* Adjust the background image to bottom-right with smooth blending */
+        /* Adjust the background image to the right with distance from top, right, and bottom edges */
         body::before {
             content: '';
             position: absolute;
-            bottom: 20;
-            right: 30;
-            width: 50%;
-            height: 70%; /* Adjust the height so it sits nicely in the bottom-right */
-            background: url('profile.jpg') no-repeat bottom right;
+            top: 50px; /* Distance from top */
+            right: 30px; /* Distance from right */
+            bottom: 50px; /* Distance from bottom */
+            width: 30%; /* Adjust the width of the image */
+            background: url('profile.jpg') no-repeat right center;
             background-size: contain; /* Keep image within screen limits */
             z-index: -1; /* Keep the image behind the content */
         }
