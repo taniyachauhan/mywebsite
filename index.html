@@ -97,7 +97,20 @@
             text-align: left; /* Align the content text to the left */
         }
 
-        /* Style for "Take a look around" section and image */
+        /* Profile Image: Adjust the background image to the right with distance from top, right, and bottom edges */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 80px; /* Distance from top */
+            right: 30px; /* Distance from right */
+            bottom: 20px; /* Distance from bottom */
+            width: 20%; /* Adjust the width of the image */
+            background: url('profile.jpg') no-repeat right center;
+            background-size: contain; /* Keep image within screen limits */
+            z-index: -1; /* Keep the image behind the content */
+        }
+
+        /* Style for "Take a look around" section and milk-transformed image */
         .bottom-section {
             position: fixed;
             bottom: 20px;
@@ -107,7 +120,7 @@
         }
 
         .bottom-section img {
-            width: 100px; /* Set the image size smaller */
+            width: 100px; /* Set the milk-transformed image size smaller */
             height: auto;
             margin-left: 20px; /* Space between image and text */
         }
@@ -150,10 +163,10 @@
         </div>
     </main>
 
-    <!-- Bottom Section: "Take a look around" text and profile image -->
+    <!-- Bottom Section: "Take a look around" text and milk-transformed image -->
     <div class="bottom-section">
         <p>Take a look around!</p>
-        <img src="profile.jpg" alt="Profile Image">
+        <img src="milk-transformed.png" alt="Milk Transformed Image">
     </div>
 
 </body>
