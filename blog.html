@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Tacha Portfolio</title>
+
+    <!-- Add Font Awesome CDN for consistency -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: black;
+            position: relative;
+        }
+
+        /* Adjust the Navigation Bar */
+        nav {
+            background-color: white;
+            color: rgba(9, 12, 67);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 90%;
+            z-index: 1;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgba(9, 12, 67);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: rgba(9, 12, 67);
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        .separator {
+            margin: 0 8px;
+            color: rgba(9, 12, 67);
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a {
+            margin-left: 12px;
+            color: rgba(9, 12, 67);
+            text-decoration: none;
+            font-size: 1.3em;
+        }
+
+        main {
+            padding-top: 60px; /* Add space for the fixed navbar */
+            padding-left: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: rgba(9, 12, 67);
+        }
+
+        .blog-list {
+            margin-top: 30px;
+        }
+
+        .blog-list a {
+            text-decoration: none;
+            color: rgba(9, 12, 67);
+            font-size: 1.5em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .blog-list a:hover {
+            color: #ff6347; /* Hover effect to change the color */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">TaCha</div>
+        <!-- Navigation Links -->
+        <div class="nav-right">
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Link back to the homepage -->
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <span class="separator">|</span>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Blog Section -->
+    <main>
+        <h1>My Blog</h1>
+
+        <!-- List of Blogs -->
+        <div class="blog-list">
+            <a href="blog-post1.html">Blog Post 1: Getting Started with Web Development</a>
+            <a href="blog-post2.html">Blog Post 2: Tips for Effective UI/UX Design</a>
+            <a href="blog-post3.html">Blog Post 3: Understanding CSS Flexbox and Grid</a>
+            <a href="blog-post4.html">Blog Post 4: Building Responsive Websites</a>
+        </div>
+    </main>
+
+</body>
+</html>
